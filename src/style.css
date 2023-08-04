@@ -1,6 +1,7 @@
 :root {
     --accent-colour-1: #244cec;
     --accent-colour-2: rgb(255, 255, 255); 
+    --accent-colour-3: #0E4BB3;
 }
 
 * {
@@ -63,7 +64,6 @@ body {
     padding: 25px 20px;
     background-color: var(--accent-colour-2);
     border-radius: 15px;
-    max-width: 700px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -95,11 +95,13 @@ input {
     outline: none;
 }
 
+.input-about {
+    min-height: 200px;
+}
+
 .prev-resume {
-    background-color: var(--accent-colour-2);
     margin: 50px;
-    padding: 50px;
-    background-color: var(--accent-colour-1);
+    background-color: var(--accent-colour-3);
 }
 
 .resume-header {
@@ -108,6 +110,7 @@ input {
     justify-content: center;
     align-items: center;
     color: white;
+    padding: 15px;
 }
 
 .resume-header h2 {
@@ -117,3 +120,39 @@ input {
 .resume-header h3 {
     color: rgba(255, 255, 255, 0.842);
 }
+
+.resume-personal {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--accent-colour-2);
+    padding: 50px;
+}
+
+.resume-personal h4 {
+    font-size: 1.2rem;
+    color: var(--accent-colour-3);
+}
+  
+.resume-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.resume-aboutme {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.resume-education {
+    background-color: white;
+    padding: 20px;
+}
+
+.resume-education-desc {
+    display: flex;
+    flex-direction: row;
+}
+  

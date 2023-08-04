@@ -13,6 +13,7 @@ export default function Content () {
         email: '',
         phone: '',
         address: '',
+        aboutMe: '',
       });
     
       const [education, setEducation] = useState({

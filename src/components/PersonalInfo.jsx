@@ -71,6 +71,18 @@ const PersonalInfo = ({ personalInfo, onChange }) => {
                 onChange={onChange}
               />
             </div>
+            <div className='input-container'>
+              <label htmlFor="aboutMe">About Me:</label>
+              <input
+                type="text"
+                id="aboutMe"
+                name="aboutMe"
+                placeholder='Enter Description'
+                className='input-about'
+                value={personalInfo.aboutMe}
+                onChange={onChange}
+              />
+            </div>
             {/* Add more input fields for other personal information (e.g., date of birth, nationality, etc.) */}
           </form>
         </div>
