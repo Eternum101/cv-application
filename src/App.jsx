@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import Header from "./header"
 import Content from "./content"
 
@@ -5,7 +6,7 @@ function App() {
 
   return (
     <>
-      <Header />
+      <Header/>
       <Content />
     </>
   )

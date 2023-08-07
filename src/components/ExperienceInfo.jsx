@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
+import { FaSuitcase } from 'react-icons/fa6';
 
-const ExperienceInfo = ({ experience, onChange }) => {
+const ExperienceInfo = ({ experience, onChange, onNewForm }) => {
     return (
         <div className='experience-info'>
-          <h2>Experience</h2>
+          <div className='experience-header'>
+            <span className='number-icon'>3</span> -
+            <FaSuitcase size='2em'/>
+            <h2>Experience</h2>
+          </div>
           <form>
           <div className='input-container'>
               <label htmlFor="companyName">Company Name:</label>
@@ -30,7 +35,7 @@ const ExperienceInfo = ({ experience, onChange }) => {
             <div className='input-container'>
             <label htmlFor="experienceStartDate">Start Date:</label>
             <input
-                type="text"
+                type="date"
                 id="experienceStartDate"
                 name="experienceStartDate"
                 placeholder='Enter Start Date'
@@ -41,7 +46,7 @@ const ExperienceInfo = ({ experience, onChange }) => {
             <div className='input-container'>
             <label htmlFor="experienceEndDate">End Date:</label>
             <input
-                type="text"
+                type="date"
                 id="experienceEndDate"
                 name="experienceEndDate"
                 placeholder='Enter End Date'
@@ -62,7 +67,7 @@ const ExperienceInfo = ({ experience, onChange }) => {
             </div>
             <div className='input-container'>
             <label htmlFor="experienceDescription">Description:</label>
-            <input
+            <textarea
                 type="text"
                 id="experienceDescription"
                 name="experienceDescription"
@@ -71,7 +76,7 @@ const ExperienceInfo = ({ experience, onChange }) => {
                 onChange={onChange}
             />
             </div>
-            {/* Add more input fields for other personal information (e.g., date of birth, nationality, etc.) */}
+            <button className='btn-new' onClick={onNewForm}>Add Experience</button>
           </form>
         </div>
       );

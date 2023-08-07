@@ -1,21 +1,15 @@
 import React, { useState } from 'react';
+import { FaAddressCard } from 'react-icons/fa6';
 
 const PersonalInfo = ({ personalInfo, onChange }) => {
     return (
         <div className='personal-info'>
-          <h2>Personal Information</h2>
+          <div className='personal-header'>
+            <span className='number-icon'>1</span> -
+            <FaAddressCard size="2em"/> 
+            <h2>Personal Information</h2>
+          </div>
           <form>
-          <div className='input-container'>
-              <label htmlFor="title">Title:</label>
-              <input
-                type="text"
-                id="title"
-                name="title"
-                placeholder='Enter Title'
-                value={personalInfo.title}
-                onChange={onChange}
-              />
-            </div>
             <div className='input-container'>
               <label htmlFor="firstName">First Name:</label>
               <input
@@ -35,6 +29,17 @@ const PersonalInfo = ({ personalInfo, onChange }) => {
                 name="lastName"
                 placeholder='Enter Last Name'
                 value={personalInfo.lastName}
+                onChange={onChange}
+              />
+            </div>
+            <div className='input-container'>
+              <label htmlFor="title">Title:</label>
+              <input
+                type="text"
+                id="title"
+                name="title"
+                placeholder='Enter Title'
+                value={personalInfo.title}
                 onChange={onChange}
               />
             </div>
@@ -73,7 +78,7 @@ const PersonalInfo = ({ personalInfo, onChange }) => {
             </div>
             <div className='input-container'>
               <label htmlFor="aboutMe">About Me:</label>
-              <input
+              <textarea
                 type="text"
                 id="aboutMe"
                 name="aboutMe"

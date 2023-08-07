@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
+import { FaGraduationCap } from 'react-icons/fa6';
 
 const EducationInfo = ({ education, onChange }) => {
     return (
         <div className='education-info'>
-          <h2>Education</h2>
+          <div className='education-header'>
+          <span className='number-icon'>2</span> -
+            <FaGraduationCap size='2em'/>
+            <h2>Education</h2>
+          </div>
           <form>
           <div className='input-container'>
               <label htmlFor="schoolName">School Name:</label>
@@ -30,7 +35,7 @@ const EducationInfo = ({ education, onChange }) => {
             <div className='input-container'>
             <label htmlFor="studyStartDate">Start Date:</label>
             <input
-                type="text"
+                type="date"
                 id="studyStartDate"
                 name="studyStartDate"
                 placeholder='Enter Start Date'
@@ -41,7 +46,7 @@ const EducationInfo = ({ education, onChange }) => {
             <div className='input-container'>
             <label htmlFor="studyEndDate">End Date:</label>
             <input
-                type="text"
+                type="date"
                 id="studyEndDate"
                 name="studyEndDate"
                 placeholder='Enter End Date'
@@ -49,6 +54,7 @@ const EducationInfo = ({ education, onChange }) => {
                 onChange={onChange}
             />
             </div>
+            <button className='btn-new'>Add Education</button>
           </form>
         </div>
       );
