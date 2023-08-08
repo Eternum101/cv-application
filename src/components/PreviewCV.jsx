@@ -1,3 +1,6 @@
+import React from "react";
+import { FaMobileScreenButton, FaLocationDot, FaRegEnvelope} from 'react-icons/fa6';
+
 const PreviewCV = ({ personalInfo, education, experience }) => {
   return (
     <div className="prev-resume">
@@ -9,9 +12,15 @@ const PreviewCV = ({ personalInfo, education, experience }) => {
         <div className="resume-contact">
           {/* Display Personal Information */}
           <h4>Contact</h4>
-          <p>{personalInfo.email}</p>
-          <p>{personalInfo.phone}</p>
-          <p>{personalInfo.address}</p>
+        <div className="resume-icons">
+          <FaRegEnvelope size='1.1em'/><p>{personalInfo.email}</p>
+        </div>
+        <div className="resume-icons">
+          <FaMobileScreenButton size='1.1em'/><p>{personalInfo.phone}</p>
+        </div>
+        <div className="resume-icons">
+          <FaLocationDot size='1.1em'/><p>{personalInfo.address}</p>
+        </div>
         </div>
         <div className="resume-aboutme">
           {/* Display About Me */}

@@ -1,7 +1,8 @@
 import React from 'react';
 import html2pdf from 'html2pdf.js';
+import { FaDownload, FaPenToSquare } from 'react-icons/fa6'; 
 
-const Header = ({ cvData }) => {
+const Header = () => {
   const handleDownloadCV = () => {
     const cvContainer = document.querySelector('.prev-resume'); // Use the correct selector for the container
 
@@ -22,8 +23,8 @@ const Header = ({ cvData }) => {
         <header className="header">
             <h1>CV<span>Builder</span></h1>
         <div className="header-buttons">
-            <button onClick={handleDownloadCV}>Download</button>
-            <button>Share</button>
+            <button onClick={handleDownloadCV}><FaDownload size='1.1em'/>Download</button>
+            <button><FaPenToSquare size='1.1em'/>Autofill</button>
         </div>
         </header>
     )
