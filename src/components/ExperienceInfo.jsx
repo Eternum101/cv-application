@@ -2,11 +2,11 @@ import { FaSuitcase, FaTrashCan } from 'react-icons/fa6';
 
 const ExperienceInfo = ({ experience, onChange, onNewExperienceForm, onDeleteExperienceForm }) => {
   const handleNewInput = () => {
-    onNewExperienceForm(); // Call the onNewExperienceForm prop to handle adding a new form
+    onNewExperienceForm();
   };
 
   const handleDeleteInput = (index) => {
-    onDeleteExperienceForm(index); // Call the onDeleteExperienceForm prop with the index to delete the specific input
+    onDeleteExperienceForm(index);
   };
 
   return (
@@ -27,7 +27,7 @@ const ExperienceInfo = ({ experience, onChange, onNewExperienceForm, onDeleteExp
               name='companyName'
               placeholder='Enter Company Name'
               value={item.companyName}
-              onChange={(e) => onChange(e, index)} // Pass the index to identify the specific input
+              onChange={(e) => onChange(e, index)}
             />
           </div>
           <div className='input-container'>
@@ -38,29 +38,29 @@ const ExperienceInfo = ({ experience, onChange, onNewExperienceForm, onDeleteExp
               name='positionTitle'
               placeholder='Enter Position'
               value={item.positionTitle}
-              onChange={(e) => onChange(e, index)} // Pass the index to identify the specific input
+              onChange={(e) => onChange(e, index)}
             />
           </div>
           <div className='input-container'>
             <label htmlFor={`experienceStartDate-${index}`}>Start Date:</label>
             <input
-              type='date'
+              type='text'
               id={`experienceStartDate-${index}`}
               name='experienceStartDate'
-              placeholder='Enter Start Date'
+              placeholder='MM/YYYY'
               value={item.experienceStartDate}
-              onChange={(e) => onChange(e, index)} // Pass the index to identify the specific input
+              onChange={(e) => onChange(e, index)}
             />
           </div>
           <div className='input-container'>
             <label htmlFor={`experienceEndDate-${index}`}>End Date:</label>
             <input
-              type='date'
+              type='text'
               id={`experienceEndDate-${index}`}
               name='experienceEndDate'
-              placeholder='Enter End Date'
+              placeholder='MM/YYYY'
               value={item.experienceEndDate}
-              onChange={(e) => onChange(e, index)} // Pass the index to identify the specific input
+              onChange={(e) => onChange(e, index)}
             />
           </div>
           <div className='input-container'>
@@ -71,7 +71,7 @@ const ExperienceInfo = ({ experience, onChange, onNewExperienceForm, onDeleteExp
               name='companyLocation'
               placeholder='Enter Location'
               value={item.companyLocation}
-              onChange={(e) => onChange(e, index)} // Pass the index to identify the specific input
+              onChange={(e) => onChange(e, index)}
             />
           </div>
           <div className='input-container'>
@@ -81,7 +81,7 @@ const ExperienceInfo = ({ experience, onChange, onNewExperienceForm, onDeleteExp
               name='experienceDescription'
               placeholder='Enter Description'
               value={item.experienceDescription}
-              onChange={(e) => onChange(e, index)} // Pass the index to identify the specific input
+              onChange={(e) => onChange(e, index)}
             />
           </div>
           <div className='delete-container'>

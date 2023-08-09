@@ -2,6 +2,7 @@
     --accent-colour-1: #244cec;
     --accent-colour-2: rgb(255, 255, 255); 
     --accent-colour-3: #0E4BB3;
+    --accent-colour-4: rgb(223, 24, 24); 
 }
 
 * {
@@ -45,7 +46,7 @@ body {
     font-weight: 600;
     padding: 9px;
     border-radius: 30px;
-    width: 120px;
+    width: 135px;
     border: none;
     cursor: pointer;
     transition: background-color 150ms ease-in-out;
@@ -69,16 +70,54 @@ body {
     grid-template-columns: repeat(auto-fit, minMax(0,1fr));
 }
 
+.autofill-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.autofill-container button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 9px;
+    border-radius: 30px;
+    width: 120px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 150ms ease-in-out;
+    color: white;
+}
+
+.autofill-container button:first-child {
+    background-color: var(--accent-colour-1);
+}
+
+.autofill-container button:last-child {
+    background-color: var(--accent-colour-4);
+}
+
+.autofill-container button:first-child:hover {
+    background-color: #115fe7;
+}
+
+.autofill-container button:last-child:hover {
+    background-color: rgb(184, 0, 0);
+}
+
 .personal-info, .education-info, .experience-info {
     display: flex;
     flex-direction: column;
-    margin: 50px;
+    margin: 30px;
     padding: 25px 20px;
     background-color: var(--accent-colour-2);
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-
 
 .personal-header, .education-header, .experience-header {
     display: flex;
@@ -280,7 +319,7 @@ input:focus, textarea:focus {
     cursor: pointer;
     transition: background-color 200ms ease-in-out;
     color: white;
-    background-color: rgb(223, 24, 24);
+    background-color: var(--accent-colour-4);
     padding: 10px 15px;
 }
 

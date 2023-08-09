@@ -1,12 +1,11 @@
 import React from 'react';
 import html2pdf from 'html2pdf.js';
-import { FaDownload, FaPenToSquare } from 'react-icons/fa6'; 
+import { FaDownload, FaGithub } from 'react-icons/fa6'; 
 
 const Header = () => {
   const handleDownloadCV = () => {
-    const cvContainer = document.querySelector('.prev-resume'); // Use the correct selector for the container
+    const cvContainer = document.querySelector('.prev-resume');
 
-    // Configuration for the PDF generation
     const options = {
       margin: 10,
       filename: 'cv_preview.pdf',
@@ -15,7 +14,6 @@ const Header = () => {
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
     };
 
-    // Generate the PDF
     html2pdf().from(cvContainer).set(options).save();
   };
 
@@ -24,7 +22,9 @@ const Header = () => {
             <h1>CV<span>Builder</span></h1>
         <div className="header-buttons">
             <button onClick={handleDownloadCV}><FaDownload size='1.1em'/>Download</button>
-            <button><FaPenToSquare size='1.1em'/>Autofill</button>
+            <a href="https://github.com/Eternum101/cv-application" target="_blank" rel="noopener noreferrer">
+            <button><FaGithub size='1.1em'/>Source Code</button>
+            </a>
         </div>
         </header>
     )

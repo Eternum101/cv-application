@@ -38,7 +38,7 @@ const PersonalInfo = ({ personalInfo, onChange }) => {
                 type="text"
                 id="title"
                 name="title"
-                placeholder='Enter Title'
+                placeholder='eg. Web Developer'
                 value={personalInfo.title}
                 onChange={onChange}
               />
@@ -49,7 +49,7 @@ const PersonalInfo = ({ personalInfo, onChange }) => {
                 type="email"
                 id="email"
                 name="email"
-                placeholder='Enter Email'
+                placeholder='eg. johndoe@gmail.com'
                 value={personalInfo.email}
                 onChange={onChange}
               />
@@ -60,7 +60,7 @@ const PersonalInfo = ({ personalInfo, onChange }) => {
                 type="tel"
                 id="phone"
                 name="phone"
-                placeholder='Enter Phone Number'
+                placeholder='eg. 0425687125'
                 value={personalInfo.phone}
                 onChange={onChange}
               />
@@ -71,7 +71,7 @@ const PersonalInfo = ({ personalInfo, onChange }) => {
                 type="text"
                 id="address"
                 name="address"
-                placeholder='Enter Address'
+                placeholder='eg. JohnDoe, Way, 1234'
                 value={personalInfo.address}
                 onChange={onChange}
               />
@@ -82,13 +82,12 @@ const PersonalInfo = ({ personalInfo, onChange }) => {
                 type="text"
                 id="aboutMe"
                 name="aboutMe"
-                placeholder='Enter Description'
+                placeholder='Tell us about yourself!'
                 className='input-about'
                 value={personalInfo.aboutMe}
                 onChange={onChange}
               />
             </div>
-            {/* Add more input fields for other personal information (e.g., date of birth, nationality, etc.) */}
           </form>
         </div>
       );

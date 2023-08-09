@@ -10,7 +10,6 @@ const PreviewCV = ({ personalInfo, education, experience }) => {
       </div>
       <div className="resume-personal">
         <div className="resume-contact">
-          {/* Display Personal Information */}
           <h4>Contact</h4>
         <div className="resume-icons">
           <FaRegEnvelope size='1.1em'/><p>{personalInfo.email}</p>
@@ -23,7 +22,6 @@ const PreviewCV = ({ personalInfo, education, experience }) => {
         </div>
         </div>
         <div className="resume-aboutme">
-          {/* Display About Me */}
           <h4>About Me</h4>
           <p>{personalInfo.aboutMe}</p>
         </div>
@@ -34,11 +32,9 @@ const PreviewCV = ({ personalInfo, education, experience }) => {
           {education.map((item, index) => (
             <li key={index}>
               <div className="resume-date">
-                {/* Display Start Date and End Date */}
                 <p>{item.studyStartDate} - {item.studyEndDate}</p>
               </div>
               <div className="resume-education-desc">
-                {/* Display Education Information */}
                 <h4>{item.schoolName}</h4>
                 <p>{item.studyTitle}</p>
               </div>
@@ -52,12 +48,10 @@ const PreviewCV = ({ personalInfo, education, experience }) => {
           {experience.map((item, index) => (
             <li key={index}>
               <div className="resume-date">
-                {/* Display Start Date and End Date */}
                 <p>{item.experienceStartDate} - {item.experienceEndDate}</p>
                 <p>{item.companyLocation}</p>
               </div>
               <div className="resume-experience-desc">
-                {/* Display Experience Information */}
                 <h4>{item.companyName}</h4>
                 <p>{item.positionTitle}</p>
                 <p>{item.experienceDescription}</p>

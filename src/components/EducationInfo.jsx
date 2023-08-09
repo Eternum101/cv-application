@@ -32,7 +32,7 @@ const EducationInfo = ({ education, onChange, onNewForm, onDeleteForm }) => {
               name='schoolName'
               placeholder='Enter School Name'
               value={item.schoolName}
-              onChange={(e) => onChange(e, index)} // Pass the index to identify the specific input
+              onChange={(e) => onChange(e, index)}
             />
           </div>
           <div className='input-container'>
@@ -43,29 +43,29 @@ const EducationInfo = ({ education, onChange, onNewForm, onDeleteForm }) => {
               name='studyTitle'
               placeholder='Enter Field of Study'
               value={item.studyTitle}
-              onChange={(e) => onChange(e, index)} // Pass the index to identify the specific input
+              onChange={(e) => onChange(e, index)}
             />
           </div>
           <div className='input-container'>
             <label htmlFor={`studyStartDate-${index}`}>Start Date:</label>
             <input
-              type='date'
+              type='text'
               id={`studyStartDate-${index}`}
               name='studyStartDate'
-              placeholder='Enter Start Date'
+              placeholder='MM/YYYY'
               value={item.studyStartDate}
-              onChange={(e) => onChange(e, index)} // Pass the index to identify the specific input
+              onChange={(e) => onChange(e, index)}
             />
           </div>
           <div className='input-container'>
             <label htmlFor={`studyEndDate-${index}`}>End Date:</label>
             <input
-              type='date'
+              type='text'
               id={`studyEndDate-${index}`}
               name='studyEndDate'
-              placeholder='Enter End Date'
+              placeholder='MM/YYYY'
               value={item.studyEndDate}
-              onChange={(e) => onChange(e, index)} // Pass the index to identify the specific input
+              onChange={(e) => onChange(e, index)}
             />
           </div>
           <div className='delete-container'>
