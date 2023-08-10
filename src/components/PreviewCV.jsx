@@ -54,7 +54,9 @@ const PreviewCV = ({ personalInfo, education, experience }) => {
               <div className="resume-experience-desc">
                 <h4>{item.companyName}</h4>
                 <p>{item.positionTitle}</p>
-                <p>{item.experienceDescription}</p>
+              <div>
+              <p>{item.experienceDescription}</p>
+              </div>
               </div>
             </li>
           ))}

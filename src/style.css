@@ -24,6 +24,7 @@ body {
     padding: 20px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     background-color: var(--accent-colour-2);
+    width: 100%;
 }
 
 .header span {
@@ -63,6 +64,10 @@ body {
 
 .header button:last-child:hover {
     background-color: #115fe7;
+}
+
+a {
+    text-decoration: none;
 }
 
 .content {
@@ -107,6 +112,10 @@ body {
 
 .autofill-container button:last-child:hover {
     background-color: rgb(184, 0, 0);
+}
+
+.cv-form {
+    overflow: hidden;
 }
 
 .personal-info, .education-info, .experience-info {
@@ -183,6 +192,12 @@ input, textarea {
     background-color: #f3f4f6;
     padding: 10px;
     font-size: 0.9rem;
+    word-wrap: break-word;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
 }
 
 input:hover, textarea:hover {
@@ -214,6 +229,7 @@ input:focus, textarea:focus {
   
 .resume-personal {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     margin-bottom: 20px;
 }
@@ -257,6 +273,8 @@ input:focus, textarea:focus {
 
 .resume-education ul,
 .resume-experience ul {
+  display: flex;
+  flex-direction: column;
   list-style: none;
   padding: 0;
 }
@@ -266,6 +284,8 @@ input:focus, textarea:focus {
   display: flex;
   margin-bottom: 10px;
   margin-top: 10px;
+  align-items: center;
+  justify-content: space-between;
 }
   
 .resume-education h3,
@@ -277,6 +297,8 @@ input:focus, textarea:focus {
 
 .resume-education-desc,
 .resume-experience-desc {
+    display: flex;
+    flex-direction: column;
     flex: 1;
     background-color: #fff;
     max-width: 100%;
@@ -295,7 +317,7 @@ input:focus, textarea:focus {
     
 .resume-date {
     margin-right: 20px;
-    min-width: 100px; 
+    min-width: 180px; 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -366,12 +388,27 @@ input:focus, textarea:focus {
         margin-top: 10px;
     }
 
+    .resume-personal {
+        flex-direction: column; /* Stack the sections vertically */
+    }
+
+    .resume-contact,
     .resume-aboutme {
-        max-width: 100%;
-        word-wrap: break-word;
+        width: 100%; /* Take up full width */
+    }
+
+    .resume-education li,
+    .resume-experience li {
+        flex-direction: column; /* Stack the sections vertically */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    .resume-date,
+    .resume-experience-desc {
+        width: 100%; /* Take up full width */
     }
 
     .prev-resume {
         height: auto; /* Allow the height to adjust based on content */
-    }
+    }  
 }
