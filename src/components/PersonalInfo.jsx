@@ -3,6 +3,7 @@ import React from 'react';
 import { FaAddressCard } from 'react-icons/fa6';
 
 const PersonalInfo = ({ personalInfo, onChange }) => {
+
     // JSX Code to display personal information
     return (
         <div className='personal-info'>
