@@ -1,14 +1,22 @@
+// Import React & React Icons
+import React from 'react';
 import { FaSuitcase, FaTrashCan } from 'react-icons/fa6';
 
 const ExperienceInfo = ({ experience, onChange, onNewExperienceForm, onDeleteExperienceForm }) => {
+  
+  // Triggers the addition of a new experience form by calling the 
+  // onNewExperienceForm function
   const handleNewInput = () => {
     onNewExperienceForm();
   };
 
+  // Handles the deletion of an experience form at a specific index by 
+  // calling the onDeleteExperienceForm function with the provided index
   const handleDeleteInput = (index) => {
     onDeleteExperienceForm(index);
   };
 
+  // JSX Code to display experience information
   return (
     <div className='experience-info'>
       <div className='experience-header'>

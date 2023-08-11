@@ -1,7 +1,11 @@
+// Import React & React Icons
+import React from 'react';
 import { FaGraduationCap, FaTrashCan } from 'react-icons/fa6';
 
 const EducationInfo = ({ education, onChange, onNewForm, onDeleteForm }) => {
 
+  // Adds a new "Education" form section with a corresponding number to the list 
+  // of form headings
   const handleNewInput = () => {
     onNewForm();
     setFormHeadings((prevHeadings) => [
@@ -10,10 +14,12 @@ const EducationInfo = ({ education, onChange, onNewForm, onDeleteForm }) => {
     ]);
   };
 
+  // Triggers the deletion of a form section at the specified index
   const handleDeleteInput = (index) => {
     onDeleteForm(index);
   }
   
+  // JSX Code to display education information
   return (
     <div className='education-info'>
       <div className='education-header'>

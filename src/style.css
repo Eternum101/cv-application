@@ -2,7 +2,10 @@
     --accent-colour-1: #244cec;
     --accent-colour-2: rgb(255, 255, 255); 
     --accent-colour-3: #0E4BB3;
-    --accent-colour-4: rgb(223, 24, 24); 
+    --accent-colour-4: rgb(223, 24, 24);
+    --cv-accent-1: #0c355c;
+    --cv-accent-2: #104b81;
+    --cv-accent-3: #1a6fbe;
 }
 
 * {
@@ -17,6 +20,7 @@ body {
     background-color: rgb(236, 236, 236);
 }
 
+/* Header Section */
 .header {
     display: flex;
     justify-content: space-between;
@@ -70,11 +74,13 @@ a {
     text-decoration: none;
 }
 
+/* Content Section */
 .content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minMax(0,1fr));
 }
 
+/* CV Form Section */
 .autofill-container {
     display: flex;
     justify-content: center;
@@ -208,121 +214,6 @@ input:focus, textarea:focus {
     border: 2px solid var(--accent-colour-1);
 }
 
-.prev-resume {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    padding: 20px;
-    max-width: 800px;
-    margin: 20px;
-    height: 1100px;
-}
-  
-.resume-header {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.resume-header h3 {
-    opacity: 0.7;
-}
-  
-.resume-personal {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-  
-.resume-contact,
-.resume-aboutme {
-    flex: 1;
-    padding: 15px;
-}
-  
-.resume-contact {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background-color: var(--accent-colour-3); 
-    color: #fff;
-}
-
-.resume-icons {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-}
-  
-.resume-aboutme {
-    background-color: #125ee2;
-    color: white;
-    max-width: 100%;
-    word-wrap: break-word;
-}
-
-.resume-contact h4, 
-.resume-aboutme h4 {
-    margin-bottom: 10px;
-}
-  
-.resume-education,
-.resume-experience {
-    margin-bottom: 20px;
-}
-
-.resume-education ul,
-.resume-experience ul {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  padding: 0;
-}
-
-.resume-education li,
-.resume-experience li {
-  display: flex;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  align-items: center;
-  justify-content: space-between;
-}
-  
-.resume-education h3,
-.resume-experience h3 {
-    background-color: var(--accent-colour-3); 
-    color: #fff;
-    padding: 5px 10px;
-}
-
-.resume-education-desc,
-.resume-experience-desc {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    background-color: #fff;
-    max-width: 100%;
-    word-wrap: break-word;
-}
-
-.resume-education + .resume-experience {
-    margin-top: 20px;
-}
-  
-.resume-education + .resume-experience,
-.resume-education h3 + .resume-education-desc,
-.resume-experience h3 + .resume-experience-desc {
-    border-top: 1px solid #ccc;
-}
-    
-.resume-date {
-    margin-right: 20px;
-    min-width: 180px; 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
 .delete-container {
     display: flex;
     justify-content: flex-end;
@@ -369,6 +260,127 @@ input:focus, textarea:focus {
     color: white;
 }
 
+/* Preview CV Section */
+.prev-cv {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    max-width: 800px;
+    margin: 20px;
+    margin-top: 35px;
+    height: 1100px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+  
+.cv-header {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: var(--cv-accent-1);
+    padding: 10px;
+    margin: 0;
+}
+
+.cv-header h2 {
+    text-transform: uppercase;
+}
+
+.cv-header h3 {
+    opacity: 0.7;
+}
+  
+.cv-personal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+  
+.cv-contact,
+.cv-aboutme {
+    flex: 1;
+    padding: 15px;
+}
+  
+.cv-contact {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    color: #fff;
+}
+
+.cv-icons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+  
+.cv-aboutme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cv-accent-2);
+    color: white;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+  
+.cv-education,
+.cv-experience {
+    margin-bottom: 20px;
+    padding: 30px;
+}
+
+.cv-education ul,
+.cv-experience ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+}
+
+.cv-education li,
+.cv-experience li {
+  display: flex;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+  
+.cv-education h3,
+.cv-experience h3 {
+    background-color: var(--cv-accent-2); 
+    color: #fff;
+    padding: 5px 10px;
+}
+
+.cv-education h4,
+.cv-experience h4 {
+    color: var(--cv-accent-3);
+}
+
+.cv-education-desc,
+.cv-experience-desc {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: #fff;
+    max-width: 100%;
+    word-wrap: break-word;
+    gap: 5px;
+}
+
+.cv-date {
+    margin-right: 20px;
+    min-width: 180px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
     .content {
         grid-template-columns: 1fr;
@@ -388,27 +400,33 @@ input:focus, textarea:focus {
         margin-top: 10px;
     }
 
-    .resume-personal {
-        flex-direction: column; /* Stack the sections vertically */
+    .cv-contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .resume-contact,
-    .resume-aboutme {
-        width: 100%; /* Take up full width */
+    .cv-personal {
+        flex-direction: column;
     }
 
-    .resume-education li,
-    .resume-experience li {
-        flex-direction: column; /* Stack the sections vertically */
-        align-items: flex-start; /* Align items to the left */
+    .cv-contact,
+    .cv-aboutme {
+        width: 100%; 
     }
 
-    .resume-date,
-    .resume-experience-desc {
-        width: 100%; /* Take up full width */
+    .cv-education li,
+    .cv-experience li {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    .prev-resume {
-        height: auto; /* Allow the height to adjust based on content */
+    .cv-date,
+    .cv-experience-desc {
+        width: 100%;
+    }
+
+    .prev-cv {
+        height: auto;
     }  
 }

@@ -1,3 +1,4 @@
+// Import React, React Icons, PersonalInfo, EducationInfo, ExperienceInfo, PreviewCV
 import React, { useState } from 'react';
 import PersonalInfo from "./components/PersonalInfo";
 import EducationInfo from "./components/EducationInfo";
@@ -6,6 +7,9 @@ import PreviewCV from "./components/PreviewCV";
 import { FaPenToSquare, FaTrashCan } from 'react-icons/fa6';
 
 export default function Content() {
+
+  // useState Hook initializes the 'personalInfo' state object with various fields
+  // which can be updated using their corresponding setter functions
   const [personalInfo, setPersonalInfo] = useState({
     title: '',
     firstName: '',
@@ -16,6 +20,8 @@ export default function Content() {
     aboutMe: '',
   });
 
+  // useState Hook initializes the 'education' state object with various fields
+  // which can be updated using their corresponding setter functions
   const [education, setEducation] = useState([
     {
       schoolName: '',
@@ -25,6 +31,8 @@ export default function Content() {
     },
   ]);
 
+  // useState Hook initializes the 'experience' state object with various fields
+  // which can be updated using their corresponding setter functions
   const [experience, setExperience] = useState([
     {
       companyName: '',
@@ -36,6 +44,7 @@ export default function Content() {
     },
   ]);
 
+  // Updates the 'personalInfo' state object when the user interacts with input fields
   const handlePersonalInfoChange = (event) => {
     const { name, value } = event.target;
     setPersonalInfo((prevPersonalInfo) => ({
@@ -44,6 +53,7 @@ export default function Content() {
     }));
   };
 
+  // Updates the 'education' state object when the user interacts with input fields
   const handleEducationChange = (event, index) => {
     const { name, value } = event.target;
     const updatedEducation = [...education];
@@ -51,6 +61,7 @@ export default function Content() {
     setEducation(updatedEducation);
   };
 
+  // Updates the 'experience' state object when the user interacts with input fields
   const handleExperienceChange = (event, index) => {
     const { name, value } = event.target;
     const updatedExperience = [...experience];
@@ -58,26 +69,31 @@ export default function Content() {
     setExperience(updatedExperience);
   };
 
+  // Adds a new education form to the 'education' array in the state
   const handleNewEducationForm = () => {
     setEducation([...education, { schoolName: '', studyTitle: '', studyStartDate: '', studyEndDate: '' }]);
   };
 
+  // Adds a new experience form to the 'experience' array in the state
   const handleNewExperienceForm = () => {
     setExperience([...experience, { companyName: '', positionTitle: '', experienceStartDate: '', experienceEndDate: '', companyLocation: '', experienceDescription: '' }]);
   };
 
+  // Deletes a education form the 'education' array in the state
   const handleDeleteEducationForm = (index) => {
     const updatedEducation = [...education];
     updatedEducation.splice(index, 1);
     setEducation(updatedEducation);
   }
 
+  // Deletes a experience form the 'experience' array in the state
   const handleDeleteExperienceForm = (index) => {
     const updatedExperience = [...experience];
     updatedExperience.splice(index, 1);
     setExperience(updatedExperience);
   };
 
+  // Autofills all forms with specified information
   const handleAutoFill = () => {
     const autoFillData = {
       firstName: 'John',
@@ -130,6 +146,7 @@ export default function Content() {
     setExperience(autoFillExperience);
   };  
 
+  // Clears all input fields on each form
   const handleClearFields = () => {
     setPersonalInfo({
       title: '',
@@ -160,6 +177,7 @@ export default function Content() {
     ]);
   };
 
+  // JSX Code to display content
   return (
     <div className="content">
       <section className="cv-form">
