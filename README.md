@@ -13,17 +13,15 @@ A simple and user-friendly CV application that allows you to build your resume.
 
 ## Screenshots
 
-### All Tasks Filter
-![](screenshots/all-tasks-to-do-list.png)
+### Initial Screen
+![](screenshots/initial-screen-cv-application.png)
 
-### Todays Tasks Filter
-![](screenshots/todays-tasks-to-do-list.png)
+### Education & Experience Section
+![](screenshots/education-section-cv-application.png)
+![](screenshots/experience-section-cv-application.png)
 
-### This Weeks Tasks Filter
-![](screenshots/this-weeks-tasks-to-do-list.png)
-
-### Projects Tasks Filter
-![](screenshots/projects-tasks-to-do-list.png)
+### Autofill & CV Preview
+![](screenshots/autofill-cv-application.png)
 
 [Back to Top](#cv-application)
 
