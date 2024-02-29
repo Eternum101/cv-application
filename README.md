@@ -1,8 +1,49 @@
-# React + Vite
+# CV Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+View Demo
 
-Currently, two official plugins are available:
+## Table of Contents
+- [About The Project](#about-the-project)
+- [Built With](#built-with)
+- [Screenshots](#screenshots)
+- [Features](#features)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## About The Project
+A simple and user-friendly CV application that allows you to build your resume.
+
+## Screenshots
+
+### All Tasks Filter
+![](screenshots/all-tasks-to-do-list.png)
+
+### Todays Tasks Filter
+![](screenshots/todays-tasks-to-do-list.png)
+
+### This Weeks Tasks Filter
+![](screenshots/this-weeks-tasks-to-do-list.png)
+
+### Projects Tasks Filter
+![](screenshots/projects-tasks-to-do-list.png)
+
+[Back to Top](#cv-application)
+
+## Built With
+- HTML
+- CSS
+- JavaScript
+- Webpack
+- React
+
+[Back to Top](#cv-application)
+
+## Features
+
+- Live Preview of CV 
+- Personal Information, Education & Experience Sections
+- Ability to Add Multiple Education & Experience
+- Delete Entries
+- Autofill & Clear CV
+- Download CV in PDF Format
+- Mobile Responsive
+
+[Back to Top](#cv-application)
