@@ -1,6 +1,6 @@
 # CV Application
 
-View Demo
+🔗 [View Demo](https://brayden-cv-builder.netlify.app/)
 
 ## Table of Contents
 - [About The Project](#about-the-project)
